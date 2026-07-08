@@ -1,0 +1,1154 @@
+/* ===========================
+   GOOGLE FONT & RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Montserrat",sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    overflow:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:#fff;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+    outline:none;
+}
+
+img{
+    user-select:none;
+}
+
+/* ===========================
+   MAIN LAYOUT
+=========================== */
+
+.main{
+    display:flex;
+    height:100vh;
+    padding:0.5rem;
+}
+
+.sidebar{
+    width:340px;
+    background:#121212;
+    border-radius:1rem;
+    margin-right:0.5rem;
+    display:flex;
+    flex-direction:column;
+}
+
+.main-content{
+    flex:1;
+    background:#121212;
+    border-radius:1rem;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:0 1.5rem 7rem;
+    scroll-behavior:smooth;
+}
+
+.main-content::-webkit-scrollbar{
+    width:8px;
+}
+
+.main-content::-webkit-scrollbar-thumb{
+    background:#535353;
+    border-radius:10px;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.nav{
+    background:#121212;
+    border-radius:1rem;
+    padding:.75rem;
+    margin-bottom:.5rem;
+}
+
+.nav-option{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    height:48px;
+    opacity:.75;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.nav-option:hover{
+    opacity:1;
+}
+
+.nav-option.active{
+    opacity:1;
+}
+
+.nav-option i{
+    font-size:1.3rem;
+}
+
+.nav-option a{
+    font-size:1rem;
+    font-weight:600;
+}
+
+/* ===========================
+   LIBRARY
+=========================== */
+
+.library{
+    flex:1;
+    background:#121212;
+    border-radius:1rem;
+    padding:.75rem;
+}
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:1rem;
+}
+
+.lib-option{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.lib-option img{
+    width:1.35rem;
+    height:1.35rem;
+}
+
+.icons{
+    display:flex;
+    gap:1rem;
+}
+
+.icons i{
+    font-size:1.1rem;
+    opacity:.7;
+    transition:.3s;
+}
+
+.icons i:hover{
+    opacity:1;
+    transform:scale(1.1);
+}
+
+/* ===========================
+   PLAYLIST BOXES
+=========================== */
+
+.library-box{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.box{
+    background:#232323;
+    border-radius:1rem;
+    padding:1rem;
+}
+
+.box-p1{
+    font-size:1rem;
+    font-weight:700;
+    margin-bottom:.5rem;
+}
+
+.box-p2{
+    font-size:.85rem;
+    opacity:.85;
+    margin-bottom:1rem;
+}
+
+.badge{
+    background:#fff;
+    color:#000;
+    border-radius:50px;
+    padding:.7rem 1rem;
+    font-weight:700;
+    transition:.3s;
+}
+
+.badge:hover{
+    transform:scale(1.05);
+}/* ===========================
+   STICKY NAVBAR
+=========================== */
+
+.sticky-nav{
+    position:sticky;
+    top:0;
+    background:#121212;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 0;
+    z-index:100;
+}
+
+.sticky-nav-icons{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.sticky-nav-icons img{
+    width:2rem;
+    height:2rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.sticky-nav-icons img:hover{
+    transform:scale(1.1);
+}
+
+.hide{
+    opacity:.6;
+}
+
+.sticky-nav-options{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.nav-item{
+    margin-left:.5rem;
+}
+
+.dark-badge{
+    background:#000;
+    color:#fff;
+}
+
+.dark-badge i{
+    margin-right:.4rem;
+}
+
+.sticky-nav .fa-user{
+    width:2rem;
+    height:2rem;
+    background:#000;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.sticky-nav .fa-user:hover{
+    transform:scale(1.1);
+}
+
+/* ===========================
+   SECTION HEADINGS
+=========================== */
+
+h2{
+    margin-top:2rem;
+    margin-bottom:1rem;
+    font-size:1.6rem;
+    font-weight:700;
+}
+
+/* ===========================
+   CARD CONTAINER
+=========================== */
+
+.card-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.25rem;
+    margin-bottom:2rem;
+}
+
+/* ===========================
+   MUSIC CARD
+=========================== */
+
+.card{
+    width:180px;
+    background:#181818;
+    border-radius:12px;
+    padding:1rem;
+    cursor:pointer;
+    transition:.35s ease;
+}
+
+.card:hover{
+    background:#282828;
+    transform:translateY(-6px);
+}
+
+.card-img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+}
+
+.card-title{
+    margin-top:.9rem;
+    font-weight:700;
+    font-size:1rem;
+}
+
+.card-info{
+    margin-top:.45rem;
+    font-size:.82rem;
+    color:#b3b3b3;
+    line-height:1.4;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.line{
+    width:100%;
+    height:1px;
+    background:#2a2a2a;
+}
+
+/* ===========================
+   MAIN FOOTER
+=========================== */
+
+.app-footer{
+    padding:2rem 0 7rem;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:2rem;
+}
+
+.footer-column{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-column h4{
+    margin-bottom:1rem;
+    font-size:1rem;
+}
+
+.footer-column a{
+    color:#b3b3b3;
+    margin:.4rem 0;
+    transition:.3s;
+}
+
+.footer-column a:hover{
+    color:#fff;
+}
+
+.social-icons{
+    display:flex;
+    gap:1rem;
+    margin:2rem 0;
+}
+
+.social-icons i{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#282828;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.social-icons i:hover{
+    background:#3a3a3a;
+    transform:translateY(-3px);
+}
+
+hr{
+    border:none;
+    border-top:1px solid #2a2a2a;
+    margin:2rem 0 1rem;
+}
+
+.copyright{
+    color:#b3b3b3;
+    font-size:.9rem;
+    text-align:center;
+}/* ===========================
+   MUSIC PLAYER
+=========================== */
+
+.music-player{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:90px;
+    background:#181818;
+    border-top:1px solid #282828;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 1rem;
+    z-index:999;
+}
+
+/* ===========================
+   ALBUM SECTION
+=========================== */
+
+.album{
+    width:25%;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.album-img{
+    width:60px;
+    height:60px;
+    border-radius:8px;
+    object-fit:cover;
+}
+
+.album-details{
+    display:flex;
+    flex-direction:column;
+}
+
+.song-name{
+    font-size:.95rem;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.song-name:hover{
+    text-decoration:underline;
+}
+
+.artist-name{
+    font-size:.75rem;
+    color:#b3b3b3;
+    margin-top:.25rem;
+}
+
+.artist-name:hover{
+    color:#fff;
+    text-decoration:underline;
+}
+
+.album-actions{
+    margin-left:auto;
+    display:flex;
+    gap:1rem;
+}
+
+.album-actions i{
+    color:#b3b3b3;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.album-actions i:hover{
+    color:#fff;
+    transform:scale(1.15);
+}
+
+/* ===========================
+   PLAYER SECTION
+=========================== */
+
+.player{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.player-controls{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:1.5rem;
+    margin-bottom:.7rem;
+}
+
+.player-control-icon{
+    width:18px;
+    opacity:.75;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.player-control-icon:hover{
+    opacity:1;
+    transform:scale(1.1);
+}
+
+.play-button{
+    width:34px;
+    opacity:1;
+}
+
+.play-button:hover{
+    transform:scale(1.15);
+}
+
+/* ===========================
+   PLAYBACK BAR
+=========================== */
+
+.playback-bar{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+}
+
+.current-time,
+.total-time{
+    font-size:.75rem;
+    color:#b3b3b3;
+    min-width:35px;
+}
+
+.progress-bar{
+    flex:1;
+    height:5px;
+    appearance:none;
+    background:#535353;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance:none;
+    width:14px;
+    height:14px;
+    background:#1db954;
+    border-radius:50%;
+}
+
+.progress-bar::-moz-range-thumb{
+    width:14px;
+    height:14px;
+    background:#1db954;
+    border:none;
+    border-radius:50%;
+}/* ===========================
+   RIGHT CONTROLS
+=========================== */
+
+.controls{
+    width:25%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:1rem;
+}
+
+.controls i{
+    color:#b3b3b3;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.controls i:hover{
+    color:#fff;
+    transform:scale(1.1);
+}
+
+.control-icon{
+    width:18px;
+    opacity:.8;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.control-icon:hover{
+    opacity:1;
+    transform:scale(1.1);
+}
+
+/* ===========================
+   VOLUME BAR
+=========================== */
+
+.volume-bar{
+    width:110px;
+    height:4px;
+    appearance:none;
+    background:#535353;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.volume-bar::-webkit-slider-thumb{
+    appearance:none;
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background:#1db954;
+}
+
+.volume-bar::-moz-range-thumb{
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background:#1db954;
+    border:none;
+}
+
+/* ===========================
+   EXTRA CONTROLS
+=========================== */
+
+.extra-controls{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:1rem;
+    margin-top:1rem;
+}
+
+.device-btn,
+.queue-btn{
+    background:#282828;
+    color:#fff;
+    padding:.7rem 1rem;
+    border-radius:999px;
+    border:none;
+    font-size:.85rem;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+    transition:.3s;
+}
+
+.device-btn:hover,
+.queue-btn:hover{
+    background:#3b3b3b;
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   BUTTON EFFECTS
+=========================== */
+
+.badge{
+    transition:all .3s ease;
+}
+
+.badge:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 10px rgba(255,255,255,.2);
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+}
+
+.card::after{
+    content:"▶";
+    position:absolute;
+    right:15px;
+    bottom:85px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#1db954;
+    color:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1rem;
+    font-weight:bold;
+    opacity:0;
+    transform:translateY(15px);
+    transition:.3s;
+}
+
+.card:hover::after{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===========================
+   SMOOTH TRANSITIONS
+=========================== */
+
+.sidebar,
+.main-content,
+.music-player,
+.card,
+button,
+img,
+i{
+    transition:.3s ease;
+}/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width:1200px){
+
+    .sidebar{
+        width:280px;
+    }
+
+    .card{
+        width:170px;
+    }
+
+    .controls{
+        width:22%;
+    }
+
+}
+
+@media (max-width:992px){
+
+    .sidebar{
+        width:90px;
+    }
+
+    .nav-option a,
+    .lib-option a,
+    .box,
+    .icons .fa-arrow-right{
+        display:none;
+    }
+
+    .nav-option{
+        justify-content:center;
+    }
+
+    .lib-option{
+        justify-content:center;
+    }
+
+    .icons{
+        justify-content:center;
+    }
+
+    .main-content{
+        padding:0 1rem 7rem;
+    }
+
+    .card{
+        width:160px;
+    }
+
+    .sticky-nav-options .badge:first-child{
+        display:none;
+    }
+
+    .album{
+        width:30%;
+    }
+
+    .player{
+        width:45%;
+    }
+
+    .controls{
+        width:25%;
+    }
+
+}
+
+/* ===========================
+   TABLET VIEW
+=========================== */
+
+@media (max-width:768px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .main{
+        padding:0;
+    }
+
+    .main-content{
+        border-radius:0;
+        padding:0 1rem 8rem;
+    }
+
+    .sticky-nav{
+        padding:1rem;
+    }
+
+    .hide{
+        display:none;
+    }
+
+    .card-container{
+        justify-content:center;
+    }
+
+    .card{
+        width:180px;
+    }
+
+    .music-player{
+        height:100px;
+        padding:0 10px;
+    }
+
+    .album{
+        width:35%;
+    }
+
+    .player{
+        width:65%;
+    }
+
+    .controls{
+        display:none;
+    }
+
+}
+
+/* ===========================
+   MOBILE VIEW
+=========================== */
+
+@media (max-width:576px){
+
+    .sticky-nav{
+        flex-direction:column;
+        gap:1rem;
+        align-items:flex-start;
+    }
+
+    .sticky-nav-options{
+        width:100%;
+        justify-content:space-between;
+    }
+
+    h2{
+        font-size:1.3rem;
+    }
+
+    .card-container{
+        justify-content:center;
+        gap:1rem;
+    }
+
+    .card{
+        width:100%;
+        max-width:320px;
+    }
+
+    .album{
+        display:none;
+    }
+
+    .player{
+        width:100%;
+    }
+
+    .player-controls{
+        gap:1rem;
+    }
+
+    .player-control-icon{
+        width:16px;
+    }
+
+    .play-button{
+        width:30px;
+    }
+
+    .playback-bar{
+        gap:.5rem;
+    }
+
+    .current-time,
+    .total-time{
+        font-size:.7rem;
+    }
+
+    .progress-bar{
+        height:4px;
+    }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:400px){
+
+    .badge{
+        font-size:.75rem;
+        padding:.55rem .9rem;
+    }
+
+    .sticky-nav-options{
+        flex-wrap:wrap;
+        gap:.5rem;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .footer-links{
+        flex-direction:column;
+        gap:2rem;
+    }
+
+    .footer-column{
+        align-items:center;
+    }
+
+    .copyright{
+        font-size:.75rem;
+    }
+
+}/* ===========================
+   CUSTOM SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#121212;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#535353;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#777;
+}
+
+/* Firefox */
+*{
+    scrollbar-width:thin;
+    scrollbar-color:#535353 #121212;
+}
+
+/* ===========================
+   INPUT RANGE
+=========================== */
+
+input[type="range"]{
+    accent-color:#1db954;
+}
+
+/* ===========================
+   ICON EFFECTS
+=========================== */
+
+i,
+.player-control-icon,
+.control-icon{
+    transition:all .3s ease;
+}
+
+i:hover,
+.player-control-icon:hover,
+.control-icon:hover{
+    color:#1db954;
+}
+
+/* ===========================
+   CARD IMAGE EFFECT
+=========================== */
+
+.card-img{
+    transition:transform .4s ease;
+}
+
+.card:hover .card-img{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   ACTIVE NAVIGATION
+=========================== */
+
+.nav-option.active{
+    opacity:1;
+    font-weight:700;
+}
+
+.nav-option.active i{
+    color:#1db954;
+}
+
+/* ===========================
+   PLAYER BUTTON
+=========================== */
+
+.play-button{
+    background:#fff;
+    border-radius:50%;
+    padding:8px;
+}
+
+.play-button:hover{
+    transform:scale(1.12);
+}
+
+/* ===========================
+   VOLUME BAR
+=========================== */
+
+.volume-bar:hover,
+.progress-bar:hover{
+    filter:brightness(1.15);
+}
+
+/* ===========================
+   FOOTER LINKS
+=========================== */
+
+.footer-column a:hover{
+    text-decoration:underline;
+}
+
+.footer-column h4{
+    color:#fff;
+}
+
+/* ===========================
+   SOCIAL ICONS
+=========================== */
+
+.social-icons i:hover{
+    background:#1db954;
+    color:#000;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.device-btn:hover,
+.queue-btn:hover,
+.badge:hover{
+    box-shadow:0 0 15px rgba(29,185,84,.35);
+}
+
+/* ===========================
+   SELECTION
+=========================== */
+
+::selection{
+    background:#1db954;
+    color:#000;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.card,
+.box,
+.footer,
+.music-player{
+    animation:fadeIn .6s ease;
+}
+
+/* ===========================
+   UTILITIES
+=========================== */
+
+.text-center{
+    text-align:center;
+}
+
+.mt-1{
+    margin-top:1rem;
+}
+
+.mt-2{
+    margin-top:2rem;
+}
+
+.mb-1{
+    margin-bottom:1rem;
+}
+
+.mb-2{
+    margin-bottom:2rem;
+}
+
+.hidden{
+    display:none;
+}
+
+/* ===========================
+   SPOTIFY GREEN
+=========================== */
+
+.spotify-green{
+    color:#1db954;
+}
+
+.bg-green{
+    background:#1db954;
+    color:#000;
+}
+
+/* ===========================
+   END OF FILE
+=========================== */
